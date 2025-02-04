@@ -21,5 +21,15 @@ Borrar (sirve para volver a correr build)
 docker compose down
 ```
 
+Otros comando utiles de la API
+
+```sh
+curl -X POST --url http://localhost:8080/authentication/login -d '{"email": "prueba1@hola.cl", "password":"pass1"}'
+curl -X POST --url http://localhost:8080/authentication/login -d '{"email": "prueba2@hola.cl", "password":"pass2"}'
+curl --request GET --url http://localhost:8080/v1 --header 'Authorization: Bearer <acces token de request anterior>' -v
+```
+
+
+
 
 
