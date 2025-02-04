@@ -11,8 +11,6 @@ import (
 
 
 func ConfigureDB() *sql.DB {
-	var dbtest *sql.DB
-	return dbtest
 	//connect to database
 	db, err := sql.Open("postgres", os.Getenv("DATABASE_URL"))
 	if err != nil {

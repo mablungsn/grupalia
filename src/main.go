@@ -12,8 +12,8 @@ import (
 func main() {
 
 	db := ConfigureDB()
-	//defer db.Close()
-	//SeedDB(db)
+	defer db.Close()
+	SeedDB(db)
 
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
